@@ -33,14 +33,14 @@
 
 ---
 
-## 📁 Project Structure
-kurukuru_project
-├── project_main/ # โค้ดหลักของโปรเจกต์
-├── sprint1/ # งานในแต่ละ sprint
-├── README.md
-├── jest.config.js
-└── azure-pipelines.yml
-
+## 📁 Project Structure  
+kurukuru_project  
+├── project_main/ # โค้ดหลักของโปรเจกต์  
+├── sprint1/ # งานในแต่ละ sprint  
+├── README.md  
+├── jest.config.js  
+└── azure-pipelines.yml  
+  
 ---
 
 ## 🚀 How to Run Project
