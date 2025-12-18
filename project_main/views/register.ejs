@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Create your account</h2>
+
+        <form id="signup-form" action="/register" method="POST">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+            <div class="terms">
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms"> I agree with <span>Terms & Conditions</span></label>
+            </div>
+
+            <p id="error-message" class="error-message"></p>
+
+            <button type="submit" class="signup-btn">Sign Up</button>
+            <button type="button" class="signin-btn" onclick="window.location.href='login'">Log In</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("signup-form").addEventListener("submit", function (event) {
+            let termsChecked = document.getElementById("terms").checked;
+            let errorMessage = document.getElementById("error-message");
+
+            if (!termsChecked) {
+                event.preventDefault(); // ป้องกันการส่งฟอร์ม
+                errorMessage.textContent = "You must agree to the Terms & Conditions before signing up!";
+                errorMessage.style.color = "red";
+            } else {
+                errorMessage.textContent = "";
+            }
+        });
+    </script>
+</body>
+
+</html>

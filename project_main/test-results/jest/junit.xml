@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="67" failures="4" errors="0" time="55.753">
+  <testsuite name="UserModel Testcases" errors="0" failures="0" skipped="0" timestamp="2025-04-29T08:58:30" time="2.067" tests="10">
+    <testcase classname="UserModel Testcases 1. ควรดึงข้อมูลผู้ใช้ทั้งหมดจากไฟล์ JSON" name="UserModel Testcases 1. ควรดึงข้อมูลผู้ใช้ทั้งหมดจากไฟล์ JSON" time="0.036">
+    </testcase>
+    <testcase classname="UserModel Testcases 2. ควรค้นหาผู้ใช้จาก username" name="UserModel Testcases 2. ควรค้นหาผู้ใช้จาก username" time="0.002">
+    </testcase>
+    <testcase classname="UserModel Testcases 3. ควรคืนค่า undefined หากไม่พบผู้ใช้จาก username" name="UserModel Testcases 3. ควรคืนค่า undefined หากไม่พบผู้ใช้จาก username" time="0.001">
+    </testcase>
+    <testcase classname="UserModel Testcases 4. ควรเพิ่มผู้ใช้ใหม่ลงใน ArrayList และบันทึกไฟล์ JSON" name="UserModel Testcases 4. ควรเพิ่มผู้ใช้ใหม่ลงใน ArrayList และบันทึกไฟล์ JSON" time="0.002">
+    </testcase>
+    <testcase classname="UserModel Testcases 5. ควรจัดการกรณีที่ไฟล์ JSON ไม่มีผู้ใช้" name="UserModel Testcases 5. ควรจัดการกรณีที่ไฟล์ JSON ไม่มีผู้ใช้" time="0">
+    </testcase>
+    <testcase classname="UserModel Testcases 6. ควรตรวจสอบกรณีที่ไฟล์ JSON มีข้อมูลที่ผิดรูปแบบ" name="UserModel Testcases 6. ควรตรวจสอบกรณีที่ไฟล์ JSON มีข้อมูลที่ผิดรูปแบบ" time="0.039">
+    </testcase>
+    <testcase classname="UserModel Testcases 7. ควรจัดการกรณีที่ไฟล์ user.json ไม่มีการเข้าถึง (เช่น ไม่มีสิทธิ์เขียน)" name="UserModel Testcases 7. ควรจัดการกรณีที่ไฟล์ user.json ไม่มีการเข้าถึง (เช่น ไม่มีสิทธิ์เขียน)" time="0.004">
+    </testcase>
+    <testcase classname="UserModel Testcases 8. ควรจัดการกรณีที่ไฟล์ user.json ไม่มีข้อมูลเมื่อเรียกใช้ฟังก์ชัน getUserByUsername" name="UserModel Testcases 8. ควรจัดการกรณีที่ไฟล์ user.json ไม่มีข้อมูลเมื่อเรียกใช้ฟังก์ชัน getUserByUsername" time="0.001">
+    </testcase>
+    <testcase classname="UserModel Testcases 9. ควรจัดการกรณีที่ข้อมูลผู้ใช้ในไฟล์ JSON มีค่าผิดประเภท" name="UserModel Testcases 9. ควรจัดการกรณีที่ข้อมูลผู้ใช้ในไฟล์ JSON มีค่าผิดประเภท" time="0.002">
+    </testcase>
+    <testcase classname="UserModel Testcases 10. ควรตรวจสอบกรณีที่ผู้ใช้มีข้อมูลที่เป็นค่า null หรือ undefined" name="UserModel Testcases 10. ควรตรวจสอบกรณีที่ผู้ใช้มีข้อมูลที่เป็นค่า null หรือ undefined" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="VideoModel Testcases" errors="0" failures="0" skipped="0" timestamp="2025-04-29T08:58:30" time="2.072" tests="10">
+    <testcase classname="VideoModel Testcases 1. ควรดึงข้อมูล videos จากไฟล์ JSON" name="VideoModel Testcases 1. ควรดึงข้อมูล videos จากไฟล์ JSON" time="0.06">
+    </testcase>
+    <testcase classname="VideoModel Testcases 2. ควรดึงข้อมูล subcategories จากไฟล์ JSON" name="VideoModel Testcases 2. ควรดึงข้อมูล subcategories จากไฟล์ JSON" time="0.002">
+    </testcase>
+    <testcase classname="VideoModel Testcases 3. ควรคืนค่าข้อมูลที่มีการจัดรูปแบบใน video table" name="VideoModel Testcases 3. ควรคืนค่าข้อมูลที่มีการจัดรูปแบบใน video table" time="0.002">
+    </testcase>
+    <testcase classname="VideoModel Testcases 4. ควรเช็คว่ามี table videos ในไฟล์ JSON หรือไม่" name="VideoModel Testcases 4. ควรเช็คว่ามี table videos ในไฟล์ JSON หรือไม่" time="0.002">
+    </testcase>
+    <testcase classname="VideoModel Testcases 5. ควรเช็คว่ามี table subcategory ในไฟล์ JSON หรือไม่" name="VideoModel Testcases 5. ควรเช็คว่ามี table subcategory ในไฟล์ JSON หรือไม่" time="0.001">
+    </testcase>
+    <testcase classname="VideoModel Testcases 6. ควรจัดการกรณีที่ videos table เป็น array ว่าง" name="VideoModel Testcases 6. ควรจัดการกรณีที่ videos table เป็น array ว่าง" time="0.048">
+    </testcase>
+    <testcase classname="VideoModel Testcases 7. ควรจัดการกรณีที่ subcategory table เป็น array ว่าง" name="VideoModel Testcases 7. ควรจัดการกรณีที่ subcategory table เป็น array ว่าง" time="0.001">
+    </testcase>
+    <testcase classname="VideoModel Testcases 8. ควรจัดการกรณีที่ videos table มีข้อมูลผิดพลาดหรือไม่ได้อยู่ในรูปแบบที่คาดหวัง" name="VideoModel Testcases 8. ควรจัดการกรณีที่ videos table มีข้อมูลผิดพลาดหรือไม่ได้อยู่ในรูปแบบที่คาดหวัง" time="0.001">
+    </testcase>
+    <testcase classname="VideoModel Testcases 9. ควรจัดการกรณีที่ videos table มีข้อมูลที่มีค่า null หรือ undefined" name="VideoModel Testcases 9. ควรจัดการกรณีที่ videos table มีข้อมูลที่มีค่า null หรือ undefined" time="0.002">
+    </testcase>
+    <testcase classname="VideoModel Testcases 10. ควรจัดการกรณีที่ไฟล์ JSON มีข้อมูลที่มีฟิลด์หายไป" name="VideoModel Testcases 10. ควรจัดการกรณีที่ไฟล์ JSON มีข้อมูลที่มีฟิลด์หายไป" time="0.002">
+    </testcase>
+  </testsuite>
+  <testsuite name="StockModel Testcases" errors="0" failures="0" skipped="0" timestamp="2025-04-29T08:58:30" time="2.117" tests="10">
+    <testcase classname="StockModel Testcases 1. getAllItems: ดึงข้อมูลสินค้าทั้งหมด (empty)" name="StockModel Testcases 1. getAllItems: ดึงข้อมูลสินค้าทั้งหมด (empty)" time="0.038">
+    </testcase>
+    <testcase classname="StockModel Testcases 2. getAllItems: ดึงข้อมูลสินค้าทั้งหมด (มีข้อมูล)" name="StockModel Testcases 2. getAllItems: ดึงข้อมูลสินค้าทั้งหมด (มีข้อมูล)" time="0.018">
+    </testcase>
+    <testcase classname="StockModel Testcases 3. getItemById: หาสินค้าด้วย ID ที่มีอยู่" name="StockModel Testcases 3. getItemById: หาสินค้าด้วย ID ที่มีอยู่" time="0.006">
+    </testcase>
+    <testcase classname="StockModel Testcases 4. getItemById: หาสินค้าด้วย ID ที่ไม่มีอยู่" name="StockModel Testcases 4. getItemById: หาสินค้าด้วย ID ที่ไม่มีอยู่" time="0.022">
+    </testcase>
+    <testcase classname="StockModel Testcases 5. saveAllItems: บันทึกข้อมูลสินค้าลงไฟล์" name="StockModel Testcases 5. saveAllItems: บันทึกข้อมูลสินค้าลงไฟล์" time="0.006">
+    </testcase>
+    <testcase classname="StockModel Testcases 6. saveAllItems: บันทึกสินค้าลงไฟล์ (empty array)" name="StockModel Testcases 6. saveAllItems: บันทึกสินค้าลงไฟล์ (empty array)" time="0.009">
+    </testcase>
+    <testcase classname="StockModel Testcases 7. getAllItems: ตรวจสอบประเภทที่คืนมา ต้องเป็น ArrayList" name="StockModel Testcases 7. getAllItems: ตรวจสอบประเภทที่คืนมา ต้องเป็น ArrayList" time="0.004">
+    </testcase>
+    <testcase classname="StockModel Testcases 8. getItemById: รับค่า null เมื่อค้นหา id ใน stock ว่างเปล่า" name="StockModel Testcases 8. getItemById: รับค่า null เมื่อค้นหา id ใน stock ว่างเปล่า" time="0.005">
+    </testcase>
+    <testcase classname="StockModel Testcases 9. saveAllItems: บันทึกสินค้าใหม่ทับของเก่าได้" name="StockModel Testcases 9. saveAllItems: บันทึกสินค้าใหม่ทับของเก่าได้" time="0.009">
+    </testcase>
+    <testcase classname="StockModel Testcases 10. getAllItems: ข้อมูลใน stock.json ต้องมี key id และ stock" name="StockModel Testcases 10. getAllItems: ข้อมูลใน stock.json ต้องมี key id และ stock" time="0.005">
+    </testcase>
+  </testsuite>
+  <testsuite name="FavoriteModel Testcases" errors="0" failures="0" skipped="0" timestamp="2025-04-29T08:58:30" time="2.044" tests="10">
+    <testcase classname="FavoriteModel Testcases 1. เรียก getFavorites ตอนยังไม่มี favorite" name="FavoriteModel Testcases 1. เรียก getFavorites ตอนยังไม่มี favorite" time="0.02">
+    </testcase>
+    <testcase classname="FavoriteModel Testcases 2. เพิ่มวิดีโอ favorite ใหม่" name="FavoriteModel Testcases 2. เพิ่มวิดีโอ favorite ใหม่" time="0.05">
+    </testcase>
+    <testcase classname="FavoriteModel Testcases 3. ไม่เพิ่มวิดีโอซ้ำ" name="FavoriteModel Testcases 3. ไม่เพิ่มวิดีโอซ้ำ" time="0.005">
+    </testcase>
+    <testcase classname="FavoriteModel Testcases 4. เพิ่มหลายวิดีโอที่ไม่ซ้ำกัน" name="FavoriteModel Testcases 4. เพิ่มหลายวิดีโอที่ไม่ซ้ำกัน" time="0.001">
+    </testcase>
+    <testcase classname="FavoriteModel Testcases 5. ลบวิดีโอที่มีอยู่ใน favorites" name="FavoriteModel Testcases 5. ลบวิดีโอที่มีอยู่ใน favorites" time="0.001">
+    </testcase>
+    <testcase classname="FavoriteModel Testcases 6. ลบวิดีโอที่ไม่มีอยู่ใน favorites" name="FavoriteModel Testcases 6. ลบวิดีโอที่ไม่มีอยู่ใน favorites" time="0.001">
+    </testcase>
+    <testcase classname="FavoriteModel Testcases 7. ลบวิดีโอจากรายการที่มีหลายรายการ" name="FavoriteModel Testcases 7. ลบวิดีโอจากรายการที่มีหลายรายการ" time="0.001">
+    </testcase>
+    <testcase classname="FavoriteModel Testcases 8. เช็คว่า addFavorite ไม่เปลี่ยนรายการเดิมเมื่อเพิ่มซ้ำ" name="FavoriteModel Testcases 8. เช็คว่า addFavorite ไม่เปลี่ยนรายการเดิมเมื่อเพิ่มซ้ำ" time="0">
+    </testcase>
+    <testcase classname="FavoriteModel Testcases 9. ลบวิดีโอหลายอันต่อเนื่อง" name="FavoriteModel Testcases 9. ลบวิดีโอหลายอันต่อเนื่อง" time="0.001">
+    </testcase>
+    <testcase classname="FavoriteModel Testcases 10. ตรวจสอบว่า getFavorites คืน object ที่มี video_id เสมอ" name="FavoriteModel Testcases 10. ตรวจสอบว่า getFavorites คืน object ที่มี video_id เสมอ" time="0.004">
+    </testcase>
+  </testsuite>
+  <testsuite name="CartModel UI Testcases" errors="0" failures="0" skipped="0" timestamp="2025-04-29T08:58:30" time="2.121" tests="10">
+    <testcase classname="CartModel UI Testcases 1. เพิ่มสินค้าลงในตะกร้า" name="CartModel UI Testcases 1. เพิ่มสินค้าลงในตะกร้า" time="0.056">
+    </testcase>
+    <testcase classname="CartModel UI Testcases 2. ลบสินค้าตำแหน่งแรกในตะกร้า" name="CartModel UI Testcases 2. ลบสินค้าตำแหน่งแรกในตะกร้า" time="0.011">
+    </testcase>
+    <testcase classname="CartModel UI Testcases 3. ลบสินค้าตำแหน่งสุดท้ายในตะกร้า" name="CartModel UI Testcases 3. ลบสินค้าตำแหน่งสุดท้ายในตะกร้า" time="0.005">
+    </testcase>
+    <testcase classname="CartModel UI Testcases 4. เพิ่มจำนวนสินค้าในตะกร้า" name="CartModel UI Testcases 4. เพิ่มจำนวนสินค้าในตะกร้า" time="0.008">
+    </testcase>
+    <testcase classname="CartModel UI Testcases 5. ลดจำนวนสินค้าเหลือ 0 แล้วลบออก" name="CartModel UI Testcases 5. ลดจำนวนสินค้าเหลือ 0 แล้วลบออก" time="0.008">
+    </testcase>
+    <testcase classname="CartModel UI Testcases 6. updateItemQuantity: สินค้าไม่เจอ =&gt; ต้อง throw error" name="CartModel UI Testcases 6. updateItemQuantity: สินค้าไม่เจอ =&gt; ต้อง throw error" time="0.004">
+    </testcase>
+    <testcase classname="CartModel UI Testcases 7. removeItemFromCart: ลบสินค้าตำแหน่งที่กำหนด" name="CartModel UI Testcases 7. removeItemFromCart: ลบสินค้าตำแหน่งที่กำหนด" time="0.01">
+    </testcase>
+    <testcase classname="CartModel UI Testcases 8. เพิ่มสินค้าในตะกร้าที่มีสินค้าอยู่แล้ว" name="CartModel UI Testcases 8. เพิ่มสินค้าในตะกร้าที่มีสินค้าอยู่แล้ว" time="0.008">
+    </testcase>
+    <testcase classname="CartModel UI Testcases 9. ลบสินค้าจากตำแหน่งที่กำหนดในตะกร้า" name="CartModel UI Testcases 9. ลบสินค้าจากตำแหน่งที่กำหนดในตะกร้า" time="0.009">
+    </testcase>
+    <testcase classname="CartModel UI Testcases 10. เพิ่มจำนวนสินค้าที่มีอยู่แล้วในตะกร้า" name="CartModel UI Testcases 10. เพิ่มจำนวนสินค้าที่มีอยู่แล้วในตะกร้า" time="0.023">
+    </testcase>
+  </testsuite>
+  <testsuite name="ArrayList" errors="0" failures="0" skipped="0" timestamp="2025-04-29T08:58:30" time="2.106" tests="11">
+    <testcase classname="ArrayList 1.ควรเริ่มต้นด้วยรายการว่าง" name="ArrayList 1.ควรเริ่มต้นด้วยรายการว่าง" time="0.034">
+    </testcase>
+    <testcase classname="ArrayList 2.ควรเพิ่มรายการได้" name="ArrayList 2.ควรเพิ่มรายการได้" time="0.003">
+    </testcase>
+    <testcase classname="ArrayList 3.ควรลบรายการตาม index ได้" name="ArrayList 3.ควรลบรายการตาม index ได้" time="0.001">
+    </testcase>
+    <testcase classname="ArrayList 4.ควรไม่ลบถ้า index ไม่ถูกต้อง" name="ArrayList 4.ควรไม่ลบถ้า index ไม่ถูกต้อง" time="0.001">
+    </testcase>
+    <testcase classname="ArrayList 5.ควรได้ค่าถูกต้องตาม index" name="ArrayList 5.ควรได้ค่าถูกต้องตาม index" time="0.001">
+    </testcase>
+    <testcase classname="ArrayList 6.ควรอัปเดตค่าตาม index ได้" name="ArrayList 6.ควรอัปเดตค่าตาม index ได้" time="0.001">
+    </testcase>
+    <testcase classname="ArrayList 7.ควรไม่อัปเดตถ้า index ไม่ถูกต้อง" name="ArrayList 7.ควรไม่อัปเดตถ้า index ไม่ถูกต้อง" time="0.001">
+    </testcase>
+    <testcase classname="ArrayList 8.ควรลบรายการตัวแรกได้" name="ArrayList 8.ควรลบรายการตัวแรกได้" time="0.001">
+    </testcase>
+    <testcase classname="ArrayList 9.ควรลบรายการตัวสุดท้ายได้" name="ArrayList 9.ควรลบรายการตัวสุดท้ายได้" time="0.004">
+    </testcase>
+    <testcase classname="ArrayList 10.ควรสร้างจาก items ที่กำหนดได้" name="ArrayList 10.ควรสร้างจาก items ที่กำหนดได้" time="0.001">
+    </testcase>
+    <testcase classname="ArrayList 11.ควรสร้างรายการว่างเมื่อส่งค่าไม่ใช่อาร์เรย์" name="ArrayList 11.ควรสร้างรายการว่างเมื่อส่งค่าไม่ใช่อาร์เรย์" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="Checkout Page UI Tests" errors="0" failures="4" skipped="0" timestamp="2025-04-29T08:58:30" time="54.709" tests="6">
+    <testcase classname="Checkout Page UI Tests should login and redirect to menu page" name="Checkout Page UI Tests should login and redirect to menu page" time="8.02">
+    </testcase>
+    <testcase classname="Checkout Page UI Tests should show favorite page" name="Checkout Page UI Tests should show favorite page" time="6.495">
+    </testcase>
+    <testcase classname="Checkout Page UI Tests should show setting page" name="Checkout Page UI Tests should show setting page" time="8.332">
+      <failure>Error: thrown: &quot;Exceeded timeout of 5000 ms for a test.
+Add a timeout value to this test to increase the timeout, if this is a long-running test. See https://jestjs.io/docs/api#testname-fn-timeout.&quot;
+    at it (C:\Users\pawin\kurukuru\project_main\test\app.ui.test.js:46:5)
+    at _dispatchDescribe (C:\Users\pawin\kurukuru\project_main\node_modules\jest-circus\build\index.js:91:26)
+    at describe (C:\Users\pawin\kurukuru\project_main\node_modules\jest-circus\build\index.js:55:5)
+    at Object.describe (C:\Users\pawin\kurukuru\project_main\test\app.ui.test.js:5:1)
+    at Runtime._execModule (C:\Users\pawin\kurukuru\project_main\node_modules\jest-runtime\build\index.js:1439:24)
+    at Runtime._loadModule (C:\Users\pawin\kurukuru\project_main\node_modules\jest-runtime\build\index.js:1022:12)
+    at Runtime.requireModule (C:\Users\pawin\kurukuru\project_main\node_modules\jest-runtime\build\index.js:882:12)
+    at jestAdapter (C:\Users\pawin\kurukuru\project_main\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:77:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at runTestInternal (C:\Users\pawin\kurukuru\project_main\node_modules\jest-runner\build\runTest.js:367:16)
+    at runTest (C:\Users\pawin\kurukuru\project_main\node_modules\jest-runner\build\runTest.js:444:34)
+    at Object.worker (C:\Users\pawin\kurukuru\project_main\node_modules\jest-runner\build\testWorker.js:106:12)</failure>
+    </testcase>
+    <testcase classname="Checkout Page UI Tests should show empty cart message if cart is empty" name="Checkout Page UI Tests should show empty cart message if cart is empty" time="8.129">
+      <failure>Error: thrown: &quot;Exceeded timeout of 5000 ms for a test.
+Add a timeout value to this test to increase the timeout, if this is a long-running test. See https://jestjs.io/docs/api#testname-fn-timeout.&quot;
+    at it (C:\Users\pawin\kurukuru\project_main\test\app.ui.test.js:53:5)
+    at _dispatchDescribe (C:\Users\pawin\kurukuru\project_main\node_modules\jest-circus\build\index.js:91:26)
+    at describe (C:\Users\pawin\kurukuru\project_main\node_modules\jest-circus\build\index.js:55:5)
+    at Object.describe (C:\Users\pawin\kurukuru\project_main\test\app.ui.test.js:5:1)
+    at Runtime._execModule (C:\Users\pawin\kurukuru\project_main\node_modules\jest-runtime\build\index.js:1439:24)
+    at Runtime._loadModule (C:\Users\pawin\kurukuru\project_main\node_modules\jest-runtime\build\index.js:1022:12)
+    at Runtime.requireModule (C:\Users\pawin\kurukuru\project_main\node_modules\jest-runtime\build\index.js:882:12)
+    at jestAdapter (C:\Users\pawin\kurukuru\project_main\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:77:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at runTestInternal (C:\Users\pawin\kurukuru\project_main\node_modules\jest-runner\build\runTest.js:367:16)
+    at runTest (C:\Users\pawin\kurukuru\project_main\node_modules\jest-runner\build\runTest.js:444:34)
+    at Object.worker (C:\Users\pawin\kurukuru\project_main\node_modules\jest-runner\build\testWorker.js:106:12)</failure>
+    </testcase>
+    <testcase classname="Checkout Page UI Tests should show trending page and sort dropdown" name="Checkout Page UI Tests should show trending page and sort dropdown" time="11.915">
+      <failure>Error: thrown: &quot;Exceeded timeout of 5000 ms for a test.
+Add a timeout value to this test to increase the timeout, if this is a long-running test. See https://jestjs.io/docs/api#testname-fn-timeout.&quot;
+    at it (C:\Users\pawin\kurukuru\project_main\test\app.ui.test.js:61:5)
+    at _dispatchDescribe (C:\Users\pawin\kurukuru\project_main\node_modules\jest-circus\build\index.js:91:26)
+    at describe (C:\Users\pawin\kurukuru\project_main\node_modules\jest-circus\build\index.js:55:5)
+    at Object.describe (C:\Users\pawin\kurukuru\project_main\test\app.ui.test.js:5:1)
+    at Runtime._execModule (C:\Users\pawin\kurukuru\project_main\node_modules\jest-runtime\build\index.js:1439:24)
+    at Runtime._loadModule (C:\Users\pawin\kurukuru\project_main\node_modules\jest-runtime\build\index.js:1022:12)
+    at Runtime.requireModule (C:\Users\pawin\kurukuru\project_main\node_modules\jest-runtime\build\index.js:882:12)
+    at jestAdapter (C:\Users\pawin\kurukuru\project_main\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:77:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at runTestInternal (C:\Users\pawin\kurukuru\project_main\node_modules\jest-runner\build\runTest.js:367:16)
+    at runTest (C:\Users\pawin\kurukuru\project_main\node_modules\jest-runner\build\runTest.js:444:34)
+    at Object.worker (C:\Users\pawin\kurukuru\project_main\node_modules\jest-runner\build\testWorker.js:106:12)</failure>
+    </testcase>
+    <testcase classname="Checkout Page UI Tests should display thank you message after checkout" name="Checkout Page UI Tests should display thank you message after checkout" time="8.708">
+      <failure>Error: thrown: &quot;Exceeded timeout of 5000 ms for a test.
+Add a timeout value to this test to increase the timeout, if this is a long-running test. See https://jestjs.io/docs/api#testname-fn-timeout.&quot;
+    at it (C:\Users\pawin\kurukuru\project_main\test\app.ui.test.js:71:5)
+    at _dispatchDescribe (C:\Users\pawin\kurukuru\project_main\node_modules\jest-circus\build\index.js:91:26)
+    at describe (C:\Users\pawin\kurukuru\project_main\node_modules\jest-circus\build\index.js:55:5)
+    at Object.describe (C:\Users\pawin\kurukuru\project_main\test\app.ui.test.js:5:1)
+    at Runtime._execModule (C:\Users\pawin\kurukuru\project_main\node_modules\jest-runtime\build\index.js:1439:24)
+    at Runtime._loadModule (C:\Users\pawin\kurukuru\project_main\node_modules\jest-runtime\build\index.js:1022:12)
+    at Runtime.requireModule (C:\Users\pawin\kurukuru\project_main\node_modules\jest-runtime\build\index.js:882:12)
+    at jestAdapter (C:\Users\pawin\kurukuru\project_main\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:77:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at runTestInternal (C:\Users\pawin\kurukuru\project_main\node_modules\jest-runner\build\runTest.js:367:16)
+    at runTest (C:\Users\pawin\kurukuru\project_main\node_modules\jest-runner\build\runTest.js:444:34)
+    at Object.worker (C:\Users\pawin\kurukuru\project_main\node_modules\jest-runner\build\testWorker.js:106:12)</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

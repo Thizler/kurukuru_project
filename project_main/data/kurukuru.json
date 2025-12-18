@@ -1,0 +1,712 @@
+[
+    {
+        "type": "header",
+        "version": "5.2.1",
+        "comment": "Export to JSON plugin for PHPMyAdmin"
+    },
+    {
+        "type": "database",
+        "name": "kurukuru"
+    },
+    {
+        "type": "table",
+        "name": "maincategory",
+        "database": "kurukuru",
+        "data": [
+            {
+                "category_id": "1",
+                "category_name": "Electronics"
+            },
+            {
+                "category_id": "2",
+                "category_name": "Fashion"
+            },
+            {
+                "category_id": "3",
+                "category_name": "Beauty & Health"
+            },
+            {
+                "category_id": "4",
+                "category_name": "Home & Garden"
+            },
+            {
+                "category_id": "5",
+                "category_name": "Food & Beverages"
+            }
+        ]
+    },
+    {
+        "type": "table",
+        "name": "subcategory",
+        "database": "kurukuru",
+        "data": [
+            {
+            "subcategory_id": "1",
+            "subcategory_name": "Smartphone",
+            "main_category_id": "1",
+            "priority": 1234
+            },
+            {
+            "subcategory_id": "2",
+            "subcategory_name": "Computers & Laptops",
+            "main_category_id": "1",
+            "priority": 1456
+            },
+            {
+            "subcategory_id": "3",
+            "subcategory_name": "Televisions",
+            "main_category_id": "1",
+            "priority": 1678
+            },
+            {
+            "subcategory_id": "4",
+            "subcategory_name": "Audio & Speakers",
+            "main_category_id": "1",
+            "priority": 1890
+            },
+            {
+            "subcategory_id": "5",
+            "subcategory_name": "Cameras",
+            "main_category_id": "1",
+            "priority": 1345
+            },
+            {
+            "subcategory_id": "6",
+            "subcategory_name": "Men Clothing",
+            "main_category_id": "2",
+            "priority": 1567
+            },
+            {
+            "subcategory_id": "7",
+            "subcategory_name": "Women Clothing",
+            "main_category_id": "2",
+            "priority": 1789
+            },
+            {
+            "subcategory_id": "8",
+            "subcategory_name": "Shoes",
+            "main_category_id": "2",
+            "priority": 1123
+            },
+            {
+            "subcategory_id": "9",
+            "subcategory_name": "Bags",
+            "main_category_id": "2",
+            "priority": 1345
+            },
+            {
+            "subcategory_id": "10",
+            "subcategory_name": "Accessories",
+            "main_category_id": "2",
+            "priority": 1567
+            },
+            {
+            "subcategory_id": "11",
+            "subcategory_name": "Cosmetics",
+            "main_category_id": "3",
+            "priority": 1789
+            },
+            {
+            "subcategory_id": "12",
+            "subcategory_name": "Skincare",
+            "main_category_id": "3",
+            "priority": 1901
+            },
+            {
+            "subcategory_id": "13",
+            "subcategory_name": "Hair Care",
+            "main_category_id": "3",
+            "priority": 1456
+            },
+            {
+            "subcategory_id": "14",
+            "subcategory_name": "Supplements",
+            "main_category_id": "3",
+            "priority": 1678
+            },
+            {
+            "subcategory_id": "15",
+            "subcategory_name": "Health Equipment",
+            "main_category_id": "3",
+            "priority": 1890
+            },
+            {
+            "subcategory_id": "16",
+            "subcategory_name": "Furniture",
+            "main_category_id": "4",
+            "priority": 1234
+            },
+            {
+            "subcategory_id": "17",
+            "subcategory_name": "Home Appliances",
+            "main_category_id": "4",
+            "priority": 1456
+            },
+            {
+            "subcategory_id": "18",
+            "subcategory_name": "Home Decor",
+            "main_category_id": "4",
+            "priority": 1678
+            },
+            {
+            "subcategory_id": "19",
+            "subcategory_name": "Garden Tools",
+            "main_category_id": "4",
+            "priority": 1890
+            },
+            {
+            "subcategory_id": "24",
+            "subcategory_name": "Snacks & Sweets",
+            "main_category_id": "5",
+            "priority": 1345
+            },
+            {
+            "subcategory_id": "25",
+            "subcategory_name": "Health Foods & Supplements",
+            "main_category_id": "5",
+            "priority": 1567
+            }
+        ]
+        },
+    {
+        "type": "table",
+        "name": "videos",
+        "database": "kurukuru",
+        "data": [
+            {
+                "video_id": "4",
+                "title": "smartphone1",
+                "video_url": "smartphone1.mp4",
+                "subcategory_id": "1",
+                "price": 123.45
+            },
+            {
+                "video_id": "5",
+                "title": "smartphone2",
+                "video_url": "smartphone2.mp4",
+                "subcategory_id": "1",
+                "price": 456.78
+            },
+            {
+                "video_id": "6",
+                "title": "smartphone3",
+                "video_url": "smartphone3.mp4",
+                "subcategory_id": "1",
+                "price": 789.12
+            },
+            {
+                "video_id": "7",
+                "title": "Laptop3",
+                "video_url": "Laptop3.mp4",
+                "subcategory_id": "2",
+                "price": 234.56
+            },
+            {
+                "video_id": "8",
+                "title": "Laptop2",
+                "video_url": "Laptop2.mp4",
+                "subcategory_id": "2",
+                "price": 567.89
+            },
+            {
+                "video_id": "9",
+                "title": "Laptop1",
+                "video_url": "laptop1.mp4",
+                "subcategory_id": "2",
+                "price": 890.12
+            },
+            {
+                "video_id": "10",
+                "title": "tv3",
+                "video_url": "tv3.mp4",
+                "subcategory_id": "3",
+                "price": 345.67
+            },
+            {
+                "video_id": "11",
+                "title": "tv2",
+                "video_url": "tv2.mp4",
+                "subcategory_id": "3",
+                "price": 678.90
+            },
+            {
+                "video_id": "12",
+                "title": "tv1",
+                "video_url": "tv1.mp4",
+                "subcategory_id": "3",
+                "price": 901.23
+            },
+            {
+                "video_id": "13",
+                "title": "Speaker3",
+                "video_url": "Speaker3.mp4",
+                "subcategory_id": "4",
+                "price": 123.45
+            },
+            {
+                "video_id": "14",
+                "title": "Speaker2",
+                "video_url": "Speaker2.mp4",
+                "subcategory_id": "4",
+                "price": 456.78
+            },
+            {
+                "video_id": "15",
+                "title": "Speaker1",
+                "video_url": "Speaker1.mp4",
+                "subcategory_id": "4",
+                "price": 789.12
+            },
+            {
+                "video_id": "16",
+                "title": "Camera3",
+                "video_url": "Camera3.mp4",
+                "subcategory_id": "5",
+                "price": 234.56
+            },
+            {
+                "video_id": "17",
+                "title": "Camera2",
+                "video_url": "Camera2.mp4",
+                "subcategory_id": "5",
+                "price": 567.89
+            },
+            {
+                "video_id": "18",
+                "title": "Camera1",
+                "video_url": "Camera1.mp4",
+                "subcategory_id": "5",
+                "price": 890.12
+            },
+            {
+                "video_id": "19",
+                "title": "Men3",
+                "video_url": "Men3.mp4",
+                "subcategory_id": "6",
+                "price": 345.67
+            },
+            {
+                "video_id": "20",
+                "title": "Men2",
+                "video_url": "Men2.mp4",
+                "subcategory_id": "6",
+                "price": 678.90
+            },
+            {
+                "video_id": "21",
+                "title": "Men1",
+                "video_url": "Men1.mp4",
+                "subcategory_id": "6",
+                "price": 901.23
+            },
+            {
+                "video_id": "22",
+                "title": "women3",
+                "video_url": "women3.mp4",
+                "subcategory_id": "7",
+                "price": 123.45
+            },
+            {
+                "video_id": "23",
+                "title": "women2",
+                "video_url": "women2.mp4",
+                "subcategory_id": "7",
+                "price": 456.78
+            },
+            {
+                "video_id": "24",
+                "title": "women1",
+                "video_url": "women1.mp4",
+                "subcategory_id": "7",
+                "price": 789.12
+            },
+            {
+                "video_id": "25",
+                "title": "shoe3",
+                "video_url": "shoe3.mp4",
+                "subcategory_id": "8",
+                "price": 234.56
+            },
+            {
+                "video_id": "26",
+                "title": "shoe2",
+                "video_url": "shoe2.mp4",
+                "subcategory_id": "8",
+                "price": 567.89
+            },
+            {
+                "video_id": "27",
+                "title": "shoe1",
+                "video_url": "shoe1.mp4",
+                "subcategory_id": "8",
+                "price": 890.12
+            },
+            {
+                "video_id": "28",
+                "title": "bag3",
+                "video_url": "bag3.mp4",
+                "subcategory_id": "9",
+                "price": 345.67
+            },
+            {
+                "video_id": "29",
+                "title": "bag2",
+                "video_url": "bag2.mp4",
+                "subcategory_id": "9",
+                "price": 678.90
+            },
+            {
+                "video_id": "30",
+                "title": "bag1",
+                "video_url": "bag1.mp4",
+                "subcategory_id": "9",
+                "price": 901.23
+            },
+            {
+                "video_id": "31",
+                "title": "acc3",
+                "video_url": "acc3.mp4",
+                "subcategory_id": "10",
+                "price": 123.45
+            },
+            {
+                "video_id": "32",
+                "title": "acc2",
+                "video_url": "acc2.mp4",
+                "subcategory_id": "10",
+                "price": 456.78
+            },
+            {
+                "video_id": "33",
+                "title": "acc1",
+                "video_url": "acc1.mp4",
+                "subcategory_id": "10",
+                "price": 789.12
+            },
+            {
+                "video_id": "34",
+                "title": "Cosmetic3",
+                "video_url": "Cosmetic3.mp4",
+                "subcategory_id": "11",
+                "price": 234.56
+            },
+            {
+                "video_id": "35",
+                "title": "Cosmetic2",
+                "video_url": "Cosmetic2.mp4",
+                "subcategory_id": "11",
+                "price": 567.89
+            },
+            {
+                "video_id": "36",
+                "title": "Cosmetic1",
+                "video_url": "Cosmetic1.mp4",
+                "subcategory_id": "11",
+                "price": 890.12
+            },
+            {
+                "video_id": "37",
+                "title": "sc3",
+                "video_url": "sc3.mp4",
+                "subcategory_id": "12",
+                "price": 345.67
+            },
+            {
+                "video_id": "38",
+                "title": "sc2",
+                "video_url": "sc2.mp4",
+                "subcategory_id": "12",
+                "price": 678.90
+            },
+            {
+                "video_id": "39",
+                "title": "sc1",
+                "video_url": "sc1.mp4",
+                "subcategory_id": "12",
+                "price": 901.23
+            },
+            {
+                "video_id": "40",
+                "title": "hair3",
+                "video_url": "hair3.mp4",
+                "subcategory_id": "13",
+                "price": 123.45
+            },
+            {
+                "video_id": "41",
+                "title": "hair2",
+                "video_url": "hair2.mp4",
+                "subcategory_id": "13",
+                "price": 456.78
+            },
+            {
+                "video_id": "42",
+                "title": "hair1",
+                "video_url": "hair1.mp4",
+                "subcategory_id": "13",
+                "price": 789.12
+            },
+            {
+                "video_id": "43",
+                "title": "Supplement3",
+                "video_url": "Supplement3.mp4",
+                "subcategory_id": "14",
+                "price": 234.56
+            },
+            {
+                "video_id": "44",
+                "title": "Supplement2",
+                "video_url": "Supplement2.mp4",
+                "subcategory_id": "14",
+                "price": 567.89
+            },
+            {
+                "video_id": "45",
+                "title": "Supplement1",
+                "video_url": "Supplement1.mp4",
+                "subcategory_id": "14",
+                "price": 890.12
+            },
+            {
+                "video_id": "46",
+                "title": "healthequipment3",
+                "video_url": "healthequipment3.mp4",
+                "subcategory_id": "15",
+                "price": 345.67
+            },
+            {
+                "video_id": "47",
+                "title": "healthequipment2",
+                "video_url": "healthequipment2.mp4",
+                "subcategory_id": "15",
+                "price": 678.90
+            },
+            {
+                "video_id": "48",
+                "title": "healthequipment1",
+                "video_url": "healthequipment1.mp4",
+                "subcategory_id": "15",
+                "price": 901.23
+            },
+            {
+                "video_id": "49",
+                "title": "Furniture3",
+                "video_url": "Furniture3.mp4",
+                "subcategory_id": "16",
+                "price": 123.45
+            },
+            {
+                "video_id": "50",
+                "title": "Furniture2",
+                "video_url": "Furniture2.mp4",
+                "subcategory_id": "16",
+                "price": 456.78
+            },
+            {
+                "video_id": "51",
+                "title": "Furniture1",
+                "video_url": "Furniture1.mp4",
+                "subcategory_id": "16",
+                "price": 789.12
+            },
+            {
+                "video_id": "52",
+                "title": "HomeApp3",
+                "video_url": "HomeApp3.mp4",
+                "subcategory_id": "17",
+                "price": 234.56
+            },
+            {
+                "video_id": "53",
+                "title": "HomeApp2",
+                "video_url": "HomeApp2.mp4",
+                "subcategory_id": "17",
+                "price": 567.89
+            },
+            {
+                "video_id": "54",
+                "title": "HomeApp1",
+                "video_url": "HomeApp1.mp4",
+                "subcategory_id": "17",
+                "price": 890.12
+            },
+            {
+                "video_id": "55",
+                "title": "Homedecor3",
+                "video_url": "Homedecor3.mp4",
+                "subcategory_id": "18",
+                "price": 345.67
+            },
+            {
+                "video_id": "56",
+                "title": "Homedecor2",
+                "video_url": "Homedecor2.mp4",
+                "subcategory_id": "18",
+                "price": 678.90
+            },
+            {
+                "video_id": "57",
+                "title": "Homedecor1",
+                "video_url": "Homedecor1.mp4",
+                "subcategory_id": "18",
+                "price": 901.23
+            },
+            {
+                "video_id": "58",
+                "title": "garden3",
+                "video_url": "garden3.mp4",
+                "subcategory_id": "19",
+                "price": 123.45
+            },
+            {
+                "video_id": "59",
+                "title": "garden2",
+                "video_url": "garden2.mp4",
+                "subcategory_id": "19",
+                "price": 456.78
+            },
+            {
+                "video_id": "60",
+                "title": "garden1",
+                "video_url": "garden1.mp4",
+                "subcategory_id": "19",
+                "price": 789.12
+            },
+            {
+                "video_id": "61",
+                "title": "Tool3",
+                "video_url": "Tool3.mp4",
+                "subcategory_id": "20",
+                "price": 234.56
+            },
+            {
+                "video_id": "62",
+                "title": "Tool2",
+                "video_url": "Tool2.mp4",
+                "subcategory_id": "20",
+                "price": 567.89
+            },
+            {
+                "video_id": "63",
+                "title": "Tool1",
+                "video_url": "Tool1.mp4",
+                "subcategory_id": "20",
+                "price": 890.12
+            },
+            {
+                "video_id": "64",
+                "title": "dry3",
+                "video_url": "dry3.mp4",
+                "subcategory_id": "21",
+                "price": 345.67
+            },
+            {
+                "video_id": "65",
+                "title": "dry2",
+                "video_url": "dry2.mp4",
+                "subcategory_id": "21",
+                "price": 678.90
+            },
+            {
+                "video_id": "66",
+                "title": "dry1",
+                "video_url": "dry1.mp4",
+                "subcategory_id": "21",
+                "price": 901.23
+            },
+            {
+                "video_id": "67",
+                "title": "fresh3",
+                "video_url": "fresh3.mp4",
+                "subcategory_id": "22",
+                "price": 123.45
+            },
+            {
+                "video_id": "68",
+                "title": "fresh2",
+                "video_url": "fresh2.mp4",
+                "subcategory_id": "22",
+                "price": 456.78
+            },
+            {
+                "video_id": "69",
+                "title": "fresh1",
+                "video_url": "fresh1.mp4",
+                "subcategory_id": "22",
+                "price": 789.12
+            },
+            {
+                "video_id": "70",
+                "title": "Beverage3",
+                "video_url": "Beverage3.mp4",
+                "subcategory_id": "23",
+                "price": 234.56
+            },
+            {
+                "video_id": "71",
+                "title": "Beverage2",
+                "video_url": "Beverage2.mp4",
+                "subcategory_id": "23",
+                "price": 567.89
+            },
+            {
+                "video_id": "72",
+                "title": "Beverage1",
+                "video_url": "Beverage1.mp4",
+                "subcategory_id": "23",
+                "price": 890.12
+            },
+            {
+                "video_id": "73",
+                "title": "Snack3",
+                "video_url": "Snack3.mp4",
+                "subcategory_id": "24",
+                "price": 345.67
+            },
+            {
+                "video_id": "74",
+                "title": "Snack2",
+                "video_url": "Snack2.mp4",
+                "subcategory_id": "24",
+                "price": 678.90
+            },
+            {
+                "video_id": "75",
+                "title": "Snack1",
+                "video_url": "Snack1.mp4",
+                "subcategory_id": "24",
+                "price": 901.23
+            },
+            {
+                "video_id": "76",
+                "title": "healthy3",
+                "video_url": "healthy3.mp4",
+                "subcategory_id": "25",
+                "price": 123.45
+            },
+            {
+                "video_id": "77",
+                "title": "healthy2",
+                "video_url": "healthy2.mp4",
+                "subcategory_id": "25",
+                "price": 456.78
+            },
+            {
+                "video_id": "78",
+                "title": "healthy1",
+                "video_url": "healthy1.mp4",
+                "subcategory_id": "25",
+                "price": 789.12
+            }
+        ]
+    },
+    {
+        "type": "table",
+        "name": "users",
+        "database": "kurukuru",
+        "data": [
+            { "id": 1, "username": "admin", "password": "1234" },
+            { "id": 2, "username": "adminn", "password": "12344" }
+        ]
+    }
+]

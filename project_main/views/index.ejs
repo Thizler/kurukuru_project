@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reel Idea Hub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: #ffe1e1;
+      margin: 0;
+    }
+
+    .container {
+      text-align: center;
+      width: 600px;
+      /* Slightly wider for better spacing */
+      background: #fff;
+      padding: 2rem;
+      /* Increased padding */
+      margin: 50px auto;
+      border-radius: 12px;
+      /* Slightly more rounded */
+      box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+      /* More pronounced shadow */
+    }
+
+    h1 {
+      font-weight: 600;
+      color: #ff4d4d;
+      margin-bottom: 25px;
+      /* Increased margin */
+    }
+
+    .button {
+      width: 100%;
+      padding: 14px;
+      /* Increased padding */
+      border-radius: 25px;
+      /* More rounded buttons */
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      /* Slightly larger font */
+      font-weight: bold;
+      margin-top: 12px;
+      /* Increased margin */
+      transition: background-color 0.3s ease;
+      /* Smooth hover effect */
+    }
+
+    .add-btn {
+      background: #ff9d9d;
+      color: white;
+    }
+
+    .add-btn:hover {
+      background: #ff7a7a;
+    }
+
+    .sort-btn {
+      background: white;
+      color: #ff9d9d;
+      border: 1px solid #ff9d9d;
+    }
+
+    .sort-btn:hover {
+      background: #ffecec;
+    }
+
+    input,
+    textarea,
+    select {
+      width: calc(100% - 22px);
+      /* Adjust width for padding and border */
+      padding: 12px;
+      /* Increased padding */
+      border: none;
+      border-bottom: 2px solid #ff9d9d;
+      outline: none;
+      background: transparent;
+      font-size: 16px;
+      /* Slightly larger font */
+      margin-bottom: 15px;
+      /* Increased margin */
+    }
+
+    label {
+      display: block;
+      text-align: left;
+      margin-bottom: 5px;
+      color: #555;
+      font-size: 14px;
+    }
+
+    .reel-list {
+      text-align: left;
+      margin-top: 30px;
+      /* Increased margin */
+      padding: 15px;
+      /* Add some padding around the list */
+      border-radius: 8px;
+      background-color: #f9f9f9;
+      /* Light background for the list */
+    }
+
+    .reel-list ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .reel-list li {
+      padding: 10px 0;
+      border-bottom: 1px solid #eee;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .reel-list li:last-child {
+      border-bottom: none;
+    }
+
+    .reel-list strong {
+      color: #333;
+      font-weight: 600;
+      margin-right: 5px;
+    }
+
+    .reel-list a {
+      color: #ff4d4d;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    .reel-list a:hover {
+      color: #cc3737;
+    }
+
+    .reel-list input[type="checkbox"] {
+      margin-right: 10px;
+    }
+
+    h2 {
+      color: #ff4d4d;
+      margin-top: 30px;
+      margin-bottom: 15px;
+      font-weight: 500;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Brainstorm Your Next Viral Reel!</h1>
+    <form action="/add" method="POST">
+      <input type="text" name="username" placeholder="Creator Name" required />
+      <input type="text" name="name" placeholder="Reel Title" required />
+      <textarea name="description" placeholder="Reel Concept" required></textarea>
+      <label for="priority">Impact Score (1-5):</label>
+      <select name="priority" id="priority">
+        <option value="1">1 (Quick & Easy)</option>
+        <option value="2">2 (Worth a Little Effort)</option>
+        <option value="3">3 (Solid Potential)</option>
+        <option value="4">4 (High Engagement Expected)</option>
+        <option value="5">5 (Go Viral!)</option>
+      </select>
+      <button type="submit" class="button add-btn">Add Reel Idea</button>
+    </form>
+
+    <h2>Reel Idea Summary by Impact Score</h2>
+    <ul>
+      <% Object.keys(summary).forEach(priority=> { %>
+        <li>Impact Score <%= priority %>: <%= summary[priority] %> ideas</li>
+        <% }) %>
+    </ul>
+
+    <form action="/search" method="POST">
+      <input type="text" name="searchName" placeholder="Search Reels by Title" />
+      <button type="submit" class="button sort-btn">Search</button>
+    </form>
+
+    <a href="/sort"><button class="button sort-btn">Sort by Impact Score</button></a>
+
+    <div class="reel-list">
+      <% if (tasks.length===0) { %>
+        <p>No reel ideas yet! Start brainstorming and add one!</p>
+        <% } else { %>
+          <ul>
+            <% tasks.forEach(task=> { %>
+              <li>
+                <span>
+                  <strong>
+                    <%= task.name %>
+                  </strong>: <%= task.description %> by <%= task.username %> (Impact: <%= task.priority %>)
+                </span>
+                <a href="/view/<%= task.name %>">View Idea</a>
+              </li>
+              <% }) %>
+          </ul>
+          <% } %>
+    </div>
+
+    <form action="/delete" method="POST">
+      <h2>Manage Reel Ideas</h2>
+      <ul>
+        <% tasks.forEach(task=> { %>
+          <li>
+            <input type="checkbox" name="taskNames" value="<%= task.name %>" />
+            <span>
+              <strong>
+                <%= task.name %>
+              </strong>: <%= task.description %> by <%= task.username %> (Impact: <%= task.priority %>)
+            </span>
+            <a href="/view/<%= task.name %>">View Idea</a>
+          </li>
+          <% }) %>
+      </ul>
+      <button type="submit" class="button" style="background-color: #f44336; color: white; margin-top: 15px;">Delete
+        Selected Ideas</button>
+    </form>
+
+    <a href="/menu">
+      <button class="button add-btn">Explore More</button>
+    </a>
+  </div>
+</body>
+
+</html>

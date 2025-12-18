@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .cart-table th,
+        .cart-table td {
+            vertical-align: middle;
+            text-align: center;
+        }
+
+        .cart-table img {
+            width: 100px;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .cart-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .cart-summary {
+            text-align: right;
+        }
+
+        .btn-primary,
+        .btn-danger {
+            border-radius: 20px;
+        }
+
+        .video-preview {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .video-preview video {
+            width: 200px;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .cart-table {
+            margin: auto;
+            width: 90%;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .cart-table th {
+            background-color: #ff9d9d;
+            color: #ffffff;
+            font-weight: 600;
+            padding: 15px;
+        }
+
+        .cart-table td {
+            padding: 15px;
+        }
+
+        .cart-table img,
+        .cart-table video {
+            max-width: 80px;
+            max-height: 80px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .cart-actions {
+            margin: 20px auto;
+            width: 90%;
+        }
+
+        .cart-summary h4 {
+            font-weight: 600;
+            color: #333;
+        }
+
+        .btn-primary,
+        .btn-danger {
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <aside class="sidebar">
+        <div class="logo">KuruKuru</div>
+        <div class="user-profile">
+            <img src="/images/user-avatar.jpg" alt="User Avatar" class="avatar">
+            <div class="user-info">
+                <p class="username">
+                    <%= user.username %>
+                </p>
+                <p class="user-role">On KuruKuru</p>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/menu"><i class="fas fa-home"></i>Home</a></li>
+                <li><a id="trend-button" href="/trending"><i class="fas fa-chart-line"></i> Trending</a></li>
+                <li><a href="/favorite"><i class="fas fa-star"></i>Favorite</a></li>
+                <li><a id="cart-button" href="/cart"><i class="fas fa-cart-plus"></i> Cart</a></li>
+                <li><a id="settings-button" href="/setting"><i class="fas fa-cog"></i> Settings</a></li>
+            </ul>
+        </nav>
+        <button class="logout-button" onclick="window.location.href='/logout'">
+            <div class="logout-content">
+                <i class="fas fa-sign-out-alt"></i>
+                <div class="logout-text">
+                    <p>Log Out</p>
+                    <p>End your session</p>
+                </div>
+            </div>
+        </button>
+    </aside>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Your Cart</h1>
+        <% if (cartItems.length> 0) { %>
+            <form method="POST" action="/cart/remove-multiple">
+                <table class="table table-bordered cart-table">
+                    <thead>
+                        <tr>
+
+                            <th>Preview</th>
+                            <th>Title</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Total</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% cartItems.forEach((item, index)=> { %>
+                            <tr>
+                                <td class="video-preview">
+                                    <% if (item.video_url) { %>
+                                        <video controls>
+                                            <source src="/assets/<%= item.video_url %>" type="video/mp4">
+                                            Your browser does not support the video tag.
+                                        </video>
+                                        <% } else { %>
+                                            <img src="<%= item.image %>" alt="<%= item.title %>">
+                                            <% } %>
+                                </td>
+                                <td>
+                                    <%= item.title %>
+                                </td>
+                                <td class="item-price">$<%= item.price.toFixed(2) %>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-sm btn-danger update-quantity"
+                                        data-index="<%= index %>" data-change="-1">-</button>
+                                    <span class="mx-2 quantity">
+                                        <%= item.quantity || 1 %>
+                                    </span>
+                                    <button type="button" class="btn btn-sm btn-success update-quantity"
+                                        data-index="<%= index %>" data-change="1">+</button>
+                                </td>
+                                <td class="item-total">$<%= ((item.price || 0) * (item.quantity || 1)).toFixed(2) %>
+                                </td>
+                            </tr>
+                            <% }); %>
+                    </tbody>
+                </table>
+                <div class="cart-actions d-flex justify-content-between align-items-center">
+                    <div>
+                        <button id="remove-first-btn" class="btn btn-warning me-2" type="button">Remove First
+                            Item</button>
+                        <button id="remove-last-btn" class="btn btn-warnicawqx" type="button">Remove Last Item</button>
+                    </div>
+                    <div class="cart-summary">
+                        <h4>Total Price: $<span id="total-price">0.00</span></h4>
+                        <button id="checkout-btn" class="btn btn-primary" type="submit"
+                            formaction="/cart/checkout">Checkout</button>
+                    </div>
+                </div>
+
+            </form>
+            <% } else { %>
+                <p class="text-center">Your cart is empty.</p>
+                <% } %>
+    </div>
+
+    <script>
+        // Remove item from cart
+
+
+        // Select/Deselect all checkboxes
+
+        // Update quantity and total price
+        document.querySelectorAll('.update-quantity').forEach(button => {
+            button.addEventListener('click', function () {
+                const index = this.getAttribute('data-index');
+                const change = this.getAttribute('data-change');
+
+                fetch(`/cart/update/${index}`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ change: parseInt(change, 10) }),
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            // Update quantity and total price dynamically
+                            updateCart();
+                        } else {
+                            window.location.reload(); // Reload the page if the update fails
+                        }
+                    })
+                    .catch(error => console.error('Error:', error));
+            });
+        });
+
+        // Function to update the total price in the cart summary
+        function updateCart() {
+            window.location.reload();
+        }
+
+        // Handle "Remove First Item" button click
+        document.getElementById('remove-first-btn').addEventListener('click', function () {
+            fetch('/cart/remove-first', {
+                method: 'POST',
+            })
+                .then(response => {
+                    if (response.ok) {
+                        window.location.reload(); // Reload the page after successful removal
+                    } else {
+                        alert('Failed to remove the first item from the cart.');
+                    }
+                })
+                .catch(error => console.error('Error:', error));
+        });
+
+        // Handle "Remove Last Item" button click
+        document.getElementById('remove-last-btn').addEventListener('click', function () {
+            fetch('/cart/remove-last', {
+                method: 'POST',
+            })
+                .then(response => {
+                    if (response.ok) {
+                        window.location.reload(); // Reload the page after successful removal
+                    } else {
+                        alert('Failed to remove the last item from the cart.');
+                    }
+                })
+                .catch(error => console.error('Error:', error));
+        });
+
+        // Function to calculate total price from item-total elements
+        function calculateTotalPrice() {
+            let totalPrice = 0;
+            document.querySelectorAll('.item-total').forEach(item => {
+                const price = parseFloat(item.textContent.replace('$', '')) || 0;
+                totalPrice += price;
+            });
+            document.getElementById('total-price').textContent = totalPrice.toFixed(2);
+        }
+
+        // Call the function to calculate total price on page load
+        calculateTotalPrice();
+    </script>
+</body>
+
+</html>

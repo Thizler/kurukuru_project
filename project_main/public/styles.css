@@ -1,0 +1,93 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #ffe1e1;
+    margin: 0;
+
+}
+
+.container {
+    text-align: center;
+    width: 550px;
+    background: #fff;
+    padding: 1.5rem;
+    margin: 50px auto;
+    border-radius: 10px;
+}
+
+h2 {
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    font-size: 14px;
+    text-align: left;
+    font-weight: 400;
+}
+
+input {
+    width: 90%;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid #ff9d9d;
+    outline: none;
+    background: transparent;
+    font-size: 14px;
+}
+
+.terms {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+}
+
+.terms input {
+    width: auto;
+}
+
+.terms span {
+    color: #ff8080;
+    cursor: pointer;
+}
+
+.signup-btn,
+.signin-btn,
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.signup-btn {
+    background: #ff9d9d;
+    color: white;
+}
+
+.signin-btn {
+    background: white;
+    color: black;
+    border: 1px solid #ff9d9d;
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 5px;
+}

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="settings-container">
+        <h1 class="settings-title">Settings</h1>
+        <form class="settings-form" method="POST" action="/menu">
+            <!-- User Profile Section -->
+            <div class="form-section">
+                <h2 class="section-title">User Profile</h2>
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" placeholder="Enter your username" value="<%= user.username %>">
+                </div>
+            </div>
+
+            <!-- Preferences Section -->
+            <div class="form-section">
+                <h2 class="section-title">Preferences</h2>
+                <div class="form-checkbox">
+                    <input type="checkbox" id="notifications" name="notifications" <%= user.notifications ? 'checked' : '' %>>
+                    <label for="notifications">Enable Notifications</label>
+                </div>
+            </div>
+
+
+            <!-- Save Button -->
+            <button type="submit" class="save-button">Save Changes</button>
+        </form>
+
+        <!-- Back to Menu Button -->
+        <button class="back-button" onclick="window.location.href='/menu'">Back to Menu</button>
+    </div>
+
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(145deg, #ff9d9d, #ffe1e1);
+            color: #333;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .settings-container {
+            background: #fff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .settings-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #ff6f6f;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .form-section {
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1);
+            font-size: 1rem;
+        }
+
+        input:focus, select:focus {
+            outline: none;
+            box-shadow: 0 0 5px #ff9d9d;
+        }
+
+        .form-checkbox {
+            display: flex;
+            align-items: center;
+        }
+
+        .form-checkbox input {
+            margin-right: 10px;
+        }
+
+        .save-button {
+            background: #ff6f6f;
+            border: none;
+            padding: 15px 30px;
+            color: #fff;
+            font-weight: 600;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            width: 100%;
+            font-size: 1rem;
+        }
+
+        .save-button:hover {
+            background: #ff3f3f;
+            transform: translateY(-3px);
+        }
+
+        .back-button {
+            background: #ddd;
+            border: none;
+            padding: 10px 20px;
+            color: #333;
+            font-weight: 600;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            width: 100%;
+            font-size: 1rem;
+            margin-top: 15px;
+        }
+
+        .back-button:hover {
+            background: #bbb;
+            transform: translateY(-3px);
+        }
+    </style>
+</body>
+</html>
